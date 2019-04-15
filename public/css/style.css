@@ -1,0 +1,63 @@
+
+.logo {
+  width: 20px;
+  margin: auto;
+  float: right;
+  padding-bottom: 1fr;
+} 
+
+.body {
+  background-image: 'logo.jpg';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+ 
+  background-color: aqua;
+  background-attachment: fixed;
+}
+.col-9 {
+  background-image: '/logo.png';
+}
+
+.submit {
+  scroll-padding: 10px;
+}
+
+.container-fluid{ 
+        margin:auto auto auto auto;
+       
+        opacity: inherit;
+	
+}
+
+
+.home-page-display {
+  width: 70%;
+  float: right;
+  padding-right: 30px;
+  position: relative;
+
+}
+h1 {
+  height: 800px;
+}
+.loginformdiv {
+  width: 30%;
+  float: right;
+
+}
+
+
+
+@media (min-width: 1200px){
+.fixed-sn main {
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+}
