@@ -90,10 +90,16 @@ app.get("/", (req, res) => {
   });
 });
 
-//About Page
+//Ideas Page/ Dashboard
 app.get("/ideas/add", (req, res) => {
   res.render("ideas/add");
 });
+
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+//About Page
 
 //User Login Route
 //app.get('/', (req, res) => {
