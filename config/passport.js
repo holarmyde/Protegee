@@ -42,6 +42,34 @@ module.exports = function(passport) {
       (accessToken, refreshToken, profile, done) => {
         console.log(accessToken);
         console.log(profile);
+
+        const image = profile.photos[0].value.substring(
+          0,
+          profile.photos[0].value.indexOf("?")
+        );
+        console.log(image);
+
+        const newUser = {
+          googleID: profile.id,
+          firstName: profile.name.givenName,
+
+          lastName: profile.name.familyName,
+          email: profile.emails[0].value,
+          image: image
+        };
+
+        //Check for Existing User
+        User.findOne({
+          googleID: profile.id
+        }).then(user => {
+          if (user) {
+            //Return user
+            done(null, user);
+          } else {
+            //Create user
+            new User(newUser).save().then(user => done(null, newUser));
+          }
+        });
       }
     )
   );

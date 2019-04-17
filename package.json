@@ -4,6 +4,7 @@
   "description": "Educational Contents and Videos",
   "main": "app.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "author": "Femi Aremu",
