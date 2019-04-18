@@ -8,7 +8,8 @@ const { ensureAuthenticated } = require("./helpers/auth");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const mongoose = require("mongoose");
-
+require("../models/Idea");
+require("../models/User");
 const app = express();
 
 // Load routes
