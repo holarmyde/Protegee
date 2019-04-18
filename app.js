@@ -12,8 +12,8 @@ const mongoose = require("mongoose");
 const app = express();
 
 // Load routes
-const ideas = require("./routes/ideas");
 const users = require("./routes/users");
+const ideas = require("./routes/ideas");
 const auth = require("./routes/auth");
 
 // Passport Config
