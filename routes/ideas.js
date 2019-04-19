@@ -13,7 +13,7 @@ router.get("/", ensureAuthenticated, (req, res) => {
     .sort({ date: "desc" })
     .then(ideas => {
       res.render("ideas/index", {
-        ideas: ideas
+        ideas
       });
     });
 });
