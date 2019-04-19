@@ -1,10 +1,10 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const router = express.Router();
+const mongoose = require("mongoose");
 const { ensureAuthenticated } = require("../helpers/auth");
 
 // Load Idea Model
-// require("../models/Idea");
+require("../models/Idea");
 const Idea = mongoose.model("ideas");
 
 // Idea Index Page
